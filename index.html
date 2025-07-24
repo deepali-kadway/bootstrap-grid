@@ -11,26 +11,43 @@
       crossorigin="anonymous"
     />
     <style>
-        .col-sm-3 {
-            background-color: #5e98d1;
-            padding: 10px;
-            border: 2px solid #000;
-        }
-        .col-sm-4 {
-            background-color: #2216c2;
-            padding: 10px;
-            border: 2px solid #000
-        }
-        .col-sm-5 {
-            background-color: #1ca72e;
-            padding: 10px;
-            border: 2px solid #000
-        }
-        .col {
-            background-color: #ce6b1b;
-            padding: 10px;
-            border: 2px solid #000
-        }
+      .col-sm-3 {
+        background-color: #5e98d1;
+        padding: 10px;
+        border: 2px solid #000;
+      }
+      .col-sm-4 {
+        background-color: #2216c2;
+        padding: 10px;
+        border: 2px solid #000;
+      }
+      .col-sm-5 {
+        background-color: #1ca72e;
+        padding: 10px;
+        border: 2px solid #000;
+      }
+      .col {
+        background-color: #ce6b1b;
+        padding: 10px;
+        border: 2px solid #000;
+      }
+      input{
+        font-family: 'Courier New', Courier, monospace;
+      }
+      .form-control{
+        color: blue;
+        width: 300px;
+      }
+      .form-class{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px double plum;
+        height: auto;
+        padding: 20px;
+        width: 400px;
+        margin: 20px auto;
+      }
     </style>
   </head>
   <body>
@@ -94,17 +111,44 @@
       </div>
     </nav>
     <h1>Hello, world!</h1>
+    <form class="form-class">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
     <!-- Each row consists of 12 columns-->
     <div class="row">
-        <!-- col-sm-3 means that the column will take up 3/12th of a row when screen is larger than small-->
-        <div class="col-sm-3">.col-sm-3</div>
-        <div class="col-sm-4">.col-sm-4</div>
-        <div class="col-sm-5">.col-sm-5</div>
+      <!-- col-sm-3 means that the column will take up 3/12th of a row when screen is larger than small-->
+      <div class="col-sm-3">.col-sm-3</div>
+      <div class="col-sm-4">.col-sm-4</div>
+      <div class="col-sm-5">.col-sm-5</div>
     </div>
-     <div class="row">
-        <!-- col will split the row to equal columns-->
-        <div class="col">col</div>
-        <div class="col">col</div>
+    <div class="row">
+      <!-- col will split the row to equal columns-->
+      <div class="col">col</div>
+      <div class="col">col</div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
